@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Time Table</title>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
+	<script type="text/javascript" src="moment.js"></script>
+	<script type="text/javascript" src="fullcalendar.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="fullcalendar.min.css">
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="mx-auto col-md-8 pb-1">
+		<p class="display-3 text-center">半自動課表生成器(for IPM)</p>
+		<div class="form-group">
+			<label for="raw-input">第一步: 把Class Time 複製進來</label>
+			<a href="example.png">Example</a>
+			<textarea class="form-control" id="raw-input"></textarea>
+			<input type="button" id="raw-submit" class="btn btn-primary mt-3" value="提交">
+		</div>
+		<!-- <p>第一步: 把Class Time 複製進來</p>
+		<a href="example.png">Example</a>
+		<br>
+		<textarea id="raw-input"></textarea> -->
+		<!-- <br> -->
+		<!-- <input type="button" id="raw-submit" value="提交"> -->
+		<p id="step-2" style="visibility: hidden;">第二步: 選擇每個課程的上課時間(日一二三四五六)</p>
+		<table id="table" style="visibility: hidden; border:1px solid black; width:100%" rules="all" class="border">
+		</table>
+		<input type="button" id="table-submit" value="提交" style="visibility: hidden;" class="btn btn-primary my-3"></input>
+		<div id="calendar"></div>
+	</div>
+	
+
+	<script type="text/javascript" src="main.js"></script>
+	
+</body>
+</html>
